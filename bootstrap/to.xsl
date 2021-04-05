@@ -226,7 +226,7 @@
             <xsl:if test="contains($mode,'table-')">
                 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/datatables.min.css"/>
             </xsl:if>
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">//</script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">//</script>
             <script src="{concat($path-general,'publikacije/themes/bootstrap/3.3.7/js/bootstrap.min.js')}">//</script>
             <script src="{concat($path-general,'publikacije/themes/plugin/jquery.sticky-kit/jquery.sticky-kit.min.js')}">//</script>
             <xsl:if test="$mode = 'persons'">
