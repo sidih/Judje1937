@@ -1,0 +1,1842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://ns.saxonica.com/xslt/export" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vv="http://saxon.sf.net/generated-variable" xmlns:java-type="http://saxon.sf.net/java-type" version="30" packageVersion="1" saxonVersion="9.8.0.12" target="JS" targetVersion="1" relocatable="false">
+ <co id="0" binds="">
+  <template name="Q{}imeOsebe" flags="os" line="379" module="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl" slots="0">
+   <choose role="body" baseUri="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl" ns="xsl=~ geo=http://www.w3.org/2003/01/geo/wgs84_pos# tei=http://www.tei-c.org/ns/1.0 ixsl=~ xs=~ rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#" line="381">
+    <fn name="empty">
+     <slash simple="1">
+      <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|3|XPTY0020|">
+       <dot flags="a"/>
+      </treat>
+      <axis name="child" nodeTest="element()" jsTest="return item.nodeType===1;"/>
+     </slash>
+    </fn>
+    <valueOf line="382">
+     <fn name="string-join">
+      <convert from="xs:anyAtomicType" to="xs:string">
+       <data>
+        <dot flags="a"/>
+       </data>
+      </convert>
+      <str val=" "/>
+     </fn>
+    </valueOf>
+    <true/>
+    <sequence line="385">
+     <forEach>
+      <slash simple="1">
+       <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|3|XPTY0020|">
+        <dot flags="a"/>
+       </treat>
+       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}surname)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='surname';"/>
+      </slash>
+      <sequence line="386">
+       <choose>
+        <fn name="exists">
+         <slash simple="1">
+          <dot type="element(Q{http://www.tei-c.org/ns/1.0}surname)"/>
+          <axis name="preceding-sibling" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}nameLink)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='nameLink';"/>
+         </slash>
+        </fn>
+        <valueOf line="387">
+         <fn name="concat">
+          <str val=" "/>
+          <atomSing card="?" diag="0|1||fn:concat">
+           <slash simple="1">
+            <dot type="element(Q{http://www.tei-c.org/ns/1.0}surname)"/>
+            <axis name="preceding-sibling" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}nameLink)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='nameLink';"/>
+           </slash>
+          </atomSing>
+          <str val=" "/>
+         </fn>
+        </valueOf>
+       </choose>
+       <choose line="390">
+        <gc op="=" card="1:1" comp="CCC">
+         <attVal name="Q{}type" chk="0"/>
+         <str val="maiden"/>
+        </gc>
+        <valueOf line="391">
+         <fn name="concat">
+          <str val="roj. "/>
+          <atomSing card="?" diag="0|1||fn:concat">
+           <dot type="element(Q{http://www.tei-c.org/ns/1.0}surname)"/>
+          </atomSing>
+         </fn>
+        </valueOf>
+        <true/>
+        <valueOf line="394">
+         <convert from="xs:untypedAtomic" to="xs:string">
+          <data>
+           <dot type="element(Q{http://www.tei-c.org/ns/1.0}surname)"/>
+          </data>
+         </convert>
+        </valueOf>
+       </choose>
+       <choose line="397">
+        <isLast test="0"/>
+        <valueOf>
+         <str val=" "/>
+        </valueOf>
+       </choose>
+      </sequence>
+     </forEach>
+     <valueOf>
+      <str val=", "/>
+     </valueOf>
+     <forEach line="402">
+      <slash simple="1">
+       <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|3|XPTY0020|">
+        <dot flags="a"/>
+       </treat>
+       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}forename)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='forename';"/>
+      </slash>
+      <sequence line="403">
+       <valueOf>
+        <convert from="xs:untypedAtomic" to="xs:string">
+         <data>
+          <dot type="element(Q{http://www.tei-c.org/ns/1.0}forename)"/>
+         </data>
+        </convert>
+       </valueOf>
+       <choose line="404">
+        <isLast test="0"/>
+        <valueOf>
+         <str val=" "/>
+        </valueOf>
+       </choose>
+      </sequence>
+     </forEach>
+    </sequence>
+   </choose>
+  </template>
+ </co>
+ <co id="1" binds="">
+  <template name="Q{}povezavaKraj" flags="os" line="343" module="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl" slots="3">
+   <choose role="body" baseUri="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl" ns="xsl=~ geo=http://www.w3.org/2003/01/geo/wgs84_pos# tei=http://www.tei-c.org/ns/1.0 ixsl=~ xs=~ rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#" line="345">
+    <fn name="contains">
+     <cvUntyped to="xs:string">
+      <data>
+       <slash simple="1">
+        <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|2|XPTY0020|">
+         <dot flags="a"/>
+        </treat>
+        <axis name="attribute" nodeTest="attribute(Q{}ref)" jsTest="return item.name==='ref'"/>
+       </slash>
+      </data>
+     </cvUntyped>
+     <str val="geonames"/>
+    </fn>
+    <elem line="346" name="a" nsuri="">
+     <sequence>
+      <att name="href" flags="l">
+       <convert from="xs:untypedAtomic" to="xs:string">
+        <data>
+         <slash simple="1">
+          <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|2|XPTY0020|">
+           <dot flags="a"/>
+          </treat>
+          <axis name="attribute" nodeTest="attribute(Q{}ref)" jsTest="return item.name==='ref'"/>
+         </slash>
+        </data>
+       </convert>
+      </att>
+      <att name="target" flags="l">
+       <str val="_blank"/>
+      </att>
+      <valueOf line="347" flags="l">
+       <fn name="string-join">
+        <convert from="xs:anyAtomicType" to="xs:string">
+         <data>
+          <dot flags="a"/>
+         </data>
+        </convert>
+        <str val=" "/>
+       </fn>
+      </valueOf>
+     </sequence>
+    </elem>
+    <fn line="350" name="contains">
+     <cvUntyped to="xs:string">
+      <data>
+       <slash simple="1">
+        <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|2|XPTY0020|">
+         <dot flags="a"/>
+        </treat>
+        <axis name="attribute" nodeTest="attribute(Q{}ref)" jsTest="return item.name==='ref'"/>
+       </slash>
+      </data>
+     </cvUntyped>
+     <str val="dbpedia.org"/>
+    </fn>
+    <let line="352" var="dbpediaRDF" as="node()?" slot="0" eval="8">
+     <fn name="document">
+      <slash line="351" simple="1">
+       <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|2|XPTY0020|">
+        <dot flags="a"/>
+       </treat>
+       <axis name="attribute" nodeTest="attribute(Q{}ref)" jsTest="return item.name==='ref'"/>
+      </slash>
+      <root/>
+     </fn>
+     <elem line="353" name="a" nsuri="">
+      <sequence>
+       <att name="target" flags="l">
+        <str val="_blank"/>
+       </att>
+       <att line="355" name="href" flags="l">
+        <let var="vv:cc-1396963787" as="element(Q{http://www.w3.org/1999/02/22-rdf-syntax-ns#}RDF)*" slot="1" eval="4">
+         <slash simple="1">
+          <varRef name="dbpediaRDF" slot="0"/>
+          <axis name="child" nodeTest="element(Q{http://www.w3.org/1999/02/22-rdf-syntax-ns#}RDF)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.w3.org/1999/02/22-rdf-syntax-ns#'&amp;&amp;q.local==='RDF';"/>
+         </slash>
+         <convert from="xs:untypedAtomic" to="xs:string">
+          <cast as="xs:untypedAtomic" emptiable="0">
+           <fn name="concat">
+            <str val="https://maps.google.com/maps?q="/>
+            <atomSing card="?" diag="0|1||fn:concat">
+             <slash>
+              <slash>
+               <varRef name="vv:cc-1396963787" slot="1"/>
+               <axis name="child" nodeTest="element(Q{http://www.w3.org/1999/02/22-rdf-syntax-ns#}Description)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.w3.org/1999/02/22-rdf-syntax-ns#'&amp;&amp;q.local==='Description';"/>
+              </slash>
+              <axis name="child" nodeTest="element(Q{http://www.w3.org/2003/01/geo/wgs84_pos#}lat)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.w3.org/2003/01/geo/wgs84_pos#'&amp;&amp;q.local==='lat';"/>
+             </slash>
+            </atomSing>
+            <str val=","/>
+            <atomSing card="?" diag="0|3||fn:concat">
+             <slash>
+              <slash>
+               <varRef name="vv:cc-1396963787" slot="1"/>
+               <axis name="child" nodeTest="element(Q{http://www.w3.org/1999/02/22-rdf-syntax-ns#}Description)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.w3.org/1999/02/22-rdf-syntax-ns#'&amp;&amp;q.local==='Description';"/>
+              </slash>
+              <axis name="child" nodeTest="element(Q{http://www.w3.org/2003/01/geo/wgs84_pos#}long)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.w3.org/2003/01/geo/wgs84_pos#'&amp;&amp;q.local==='long';"/>
+             </slash>
+            </atomSing>
+           </fn>
+          </cast>
+         </convert>
+        </let>
+       </att>
+       <valueOf line="357" flags="l">
+        <fn name="string-join">
+         <convert from="xs:anyAtomicType" to="xs:string">
+          <data>
+           <dot flags="a"/>
+          </data>
+         </convert>
+         <str val=" "/>
+        </fn>
+       </valueOf>
+      </sequence>
+     </elem>
+    </let>
+    <fn line="360" name="exists">
+     <slash simple="1">
+      <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|2|XPTY0020|">
+       <dot flags="a"/>
+      </treat>
+      <axis name="attribute" nodeTest="attribute(Q{}ana)" jsTest="return item.name==='ana'"/>
+     </slash>
+    </fn>
+    <let line="361" var="krajID" as="xs:string" slot="2" eval="8">
+     <fn name="substring-after">
+      <cvUntyped to="xs:string">
+       <data>
+        <slash simple="1">
+         <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|2|XPTY0020|">
+          <dot flags="a"/>
+         </treat>
+         <axis name="attribute" nodeTest="attribute(Q{}ana)" jsTest="return item.name==='ana'"/>
+        </slash>
+       </data>
+      </cvUntyped>
+      <str val="#"/>
+     </fn>
+     <choose line="363">
+      <fn name="exists">
+       <slash>
+        <filter flags="b">
+         <slash>
+          <slash>
+           <slash>
+            <slash>
+             <slash>
+              <slash simple="1">
+               <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|0|XPTY0020|">
+                <dot flags="a"/>
+               </treat>
+               <axis name="ancestor" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}TEI)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='TEI';"/>
+              </slash>
+              <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}teiHeader)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='teiHeader';"/>
+             </slash>
+             <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}profileDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='profileDesc';"/>
+            </slash>
+            <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}settingDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='settingDesc';"/>
+           </slash>
+           <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listPlace)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listPlace';"/>
+          </slash>
+          <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}place)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='place';"/>
+         </slash>
+         <gc op="=" card="1:1" comp="CCC">
+          <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+          <varRef name="krajID" slot="2"/>
+         </gc>
+        </filter>
+        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+       </slash>
+      </fn>
+      <elem line="364" name="a" nsuri="">
+       <sequence>
+        <att name="href" flags="l">
+         <fn name="translate">
+          <check card="?" diag="0|0||fn:translate">
+           <cvUntyped to="xs:string">
+            <data>
+             <docOrder intra="1">
+              <slash>
+               <docOrder intra="1">
+                <slash>
+                 <docOrder intra="1">
+                  <filter flags="b">
+                   <slash>
+                    <docOrder intra="1">
+                     <slash>
+                      <docOrder intra="1">
+                       <slash>
+                        <docOrder intra="1">
+                         <slash>
+                          <docOrder intra="1">
+                           <slash>
+                            <fn name="reverse">
+                             <slash simple="1">
+                              <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|0|XPTY0020|">
+                               <dot flags="a"/>
+                              </treat>
+                              <axis name="ancestor" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}TEI)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='TEI';"/>
+                             </slash>
+                            </fn>
+                            <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}teiHeader)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='teiHeader';"/>
+                           </slash>
+                          </docOrder>
+                          <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}profileDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='profileDesc';"/>
+                         </slash>
+                        </docOrder>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}settingDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='settingDesc';"/>
+                       </slash>
+                      </docOrder>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listPlace)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listPlace';"/>
+                     </slash>
+                    </docOrder>
+                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}place)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='place';"/>
+                   </slash>
+                   <gc op="=" card="1:1" comp="CCC">
+                    <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                    <varRef name="krajID" slot="2"/>
+                   </gc>
+                  </filter>
+                 </docOrder>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                </slash>
+               </docOrder>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}geo)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='geo';"/>
+              </slash>
+             </docOrder>
+            </data>
+           </cvUntyped>
+          </check>
+          <str val=" "/>
+          <str val=","/>
+         </fn>
+        </att>
+        <att name="target" flags="l">
+         <str val="_blank"/>
+        </att>
+        <valueOf line="365" flags="l">
+         <fn name="string-join">
+          <convert from="xs:anyAtomicType" to="xs:string">
+           <data>
+            <dot flags="a"/>
+           </data>
+          </convert>
+          <str val=" "/>
+         </fn>
+        </valueOf>
+       </sequence>
+      </elem>
+      <true/>
+      <valueOf line="369">
+       <fn name="string-join">
+        <convert from="xs:anyAtomicType" to="xs:string">
+         <data>
+          <dot flags="a"/>
+         </data>
+        </convert>
+        <str val=" "/>
+       </fn>
+      </valueOf>
+     </choose>
+    </let>
+    <true/>
+    <valueOf line="374">
+     <fn name="string-join">
+      <convert from="xs:anyAtomicType" to="xs:string">
+       <data>
+        <dot flags="a"/>
+       </data>
+      </convert>
+      <str val=" "/>
+     </fn>
+    </valueOf>
+   </choose>
+  </template>
+ </co>
+ <co id="2" binds="0 1 1 1 1 1 0 0 0">
+  <mode onNo="TC" flags="dW" patternSlots="0">
+   <templateRule prec="0" prio="-0.5" seq="0" rank="0" minImp="0" slots="8" flags="s" line="13" module="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl">
+    <p.nodeTest role="match" test="document-node()" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType===9||item.nodeType===11);"/>
+    <let role="action" baseUri="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl" ns="xsl=~ geo=http://www.w3.org/2003/01/geo/wgs84_pos# tei=http://www.tei-c.org/ns/1.0 ixsl=~ xs=~ rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#" line="14" var="ident" as="item()*" slot="0" eval="8">
+     <let var="vv:LHS355509904" as="map(*)" slot="1" eval="8">
+      <ifCall name="Q{http://saxonica.com/ns/interactiveXSLT}query-params" type="map(*)"/>
+      <ifCall name="Q{http://www.w3.org/2005/xpath-functions/map}get" type="item()*">
+       <varRef name="vv:LHS355509904" slot="1"/>
+       <str val="id"/>
+      </ifCall>
+     </let>
+     <forEach line="15">
+      <fn name="key">
+       <str val="Q{http://saxon.sf.net/}kk101"/>
+       <data>
+        <varRef name="ident" slot="0"/>
+       </data>
+       <dot type="document-node()"/>
+      </fn>
+      <resultDoc line="16" global="#&#xA;#Mon Apr 05 16:15:27 CEST 2021&#xA;" local="#&#xA;#Mon Apr 05 16:15:27 CEST 2021&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
+       <str role="href" val="#person"/>
+       <sequence role="content" line="17">
+        <elem name="div" nsuri="">
+         <sequence>
+          <att name="class" flags="l">
+           <str val="panel stickybox stickyHeaderbox"/>
+          </att>
+          <elem line="18" name="table" nsuri="" flags="l">
+           <sequence>
+            <att name="width" flags="l">
+             <str val="100%"/>
+            </att>
+            <elem line="19" name="td" nsuri="" flags="l">
+             <sequence>
+              <att name="width" flags="l">
+               <str val="50px"/>
+              </att>
+              <elem line="20" name="img" nsuri="" flags="l">
+               <sequence>
+                <att name="id" flags="l">
+                 <str val="info_icon"/>
+                </att>
+                <att name="src" flags="l">
+                 <str val="http://gams.uni-graz.at/dic/images/person.png"/>
+                </att>
+                <att name="style" flags="l">
+                 <str val="float:left; margin-top:3px; opacity:1 "/>
+                </att>
+                <att name="width" flags="l">
+                 <str val="35px"/>
+                </att>
+               </sequence>
+              </elem>
+             </sequence>
+            </elem>
+            <elem line="24" name="td" nsuri="" flags="l">
+             <elem name="b" nsuri="" flags="l">
+              <elem name="a" nsuri="" flags="l">
+               <sequence>
+                <att name="href" flags="l">
+                 <fn name="concat">
+                  <str val="person.html?id="/>
+                  <atomSing card="?" diag="0|1||fn:concat">
+                   <varRef name="ident" slot="0"/>
+                  </atomSing>
+                 </fn>
+                </att>
+                <forEach line="25">
+                 <first>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+                 </first>
+                 <callT line="26" name="imeOsebe" bSlot="0"/>
+                </forEach>
+               </sequence>
+              </elem>
+             </elem>
+            </elem>
+            <elem line="31" name="td" nsuri="" flags="l">
+             <sequence>
+              <att name="width" flags="l">
+               <str val="40"/>
+              </att>
+              <elem line="32" name="a" nsuri="" flags="l">
+               <sequence>
+                <att name="href" flags="l">
+                 <str val="listPerson-Jews-1937.xml"/>
+                </att>
+                <att name="alt" flags="l">
+                 <str val="TEI-Dokument"/>
+                </att>
+                <att name="target" flags="l">
+                 <str val="_blank"/>
+                </att>
+                <att name="title" flags="l">
+                 <str val="TEI-Dokument"/>
+                </att>
+                <elem line="33" name="img" nsuri="" flags="l">
+                 <sequence>
+                  <att name="src" flags="l">
+                   <str val="http://gams.uni-graz.at/dic/images/tei.png"/>
+                  </att>
+                  <att name="style" flags="l">
+                   <str val="float:right "/>
+                  </att>
+                  <att name="width" flags="l">
+                   <str val="40px"/>
+                  </att>
+                 </sequence>
+                </elem>
+               </sequence>
+              </elem>
+             </sequence>
+            </elem>
+           </sequence>
+          </elem>
+         </sequence>
+        </elem>
+        <elem line="38" name="div" nsuri="">
+         <sequence>
+          <att name="class" flags="l">
+           <str val="panel"/>
+          </att>
+          <elem line="39" name="table" nsuri="" flags="l">
+           <sequence>
+            <att name="class" flags="l">
+             <str val="table table-hover"/>
+            </att>
+            <att name="style" flags="l">
+             <str val="margin-top:15px"/>
+            </att>
+            <choose line="40">
+             <fn name="exists">
+              <subscript>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+               <int val="2"/>
+              </subscript>
+             </fn>
+             <elem line="48" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Predhodno ime: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <sequence>
+                 <forEach>
+                  <subscript>
+                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+                   <int val="2"/>
+                  </subscript>
+                  <sequence line="49">
+                   <valueOf flags="l">
+                    <fn name="string-join">
+                     <convert from="xs:untypedAtomic" to="xs:string">
+                      <data>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}surname)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='surname';"/>
+                      </data>
+                     </convert>
+                     <str val=" "/>
+                    </fn>
+                   </valueOf>
+                   <choose line="50">
+                    <and op="and">
+                     <fn name="exists">
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}surname)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='surname';"/>
+                     </fn>
+                     <fn name="exists">
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}forename)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='forename';"/>
+                     </fn>
+                    </and>
+                    <valueOf flags="l">
+                     <str val=", "/>
+                    </valueOf>
+                   </choose>
+                   <valueOf line="53" flags="l">
+                    <fn name="string-join">
+                     <convert from="xs:untypedAtomic" to="xs:string">
+                      <data>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}forename)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='forename';"/>
+                      </data>
+                     </convert>
+                     <str val=" "/>
+                    </fn>
+                   </valueOf>
+                  </sequence>
+                 </forEach>
+                 <choose line="55">
+                  <fn name="exists">
+                   <slash simple="1">
+                    <subscript>
+                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+                     <int val="2"/>
+                    </subscript>
+                    <axis name="attribute" nodeTest="attribute(Q{}notAfter)" jsTest="return item.name==='notAfter'"/>
+                   </slash>
+                  </fn>
+                  <sequence line="57">
+                   <valueOf flags="l">
+                    <str val=" (pred "/>
+                   </valueOf>
+                   <valueOf flags="l">
+                    <convert from="xs:untypedAtomic" to="xs:string">
+                     <data>
+                      <slash simple="1">
+                       <subscript>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+                        <int val="2"/>
+                       </subscript>
+                       <axis name="attribute" nodeTest="attribute(Q{}notAfter)" jsTest="return item.name==='notAfter'"/>
+                      </slash>
+                     </data>
+                    </convert>
+                   </valueOf>
+                   <valueOf flags="Sl">
+                    <str val=")"/>
+                   </valueOf>
+                  </sequence>
+                 </choose>
+                </sequence>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="63">
+             <fn name="exists">
+              <slash>
+               <slash>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}birth)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='birth';"/>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}date)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='date';"/>
+               </slash>
+               <axis name="attribute" nodeTest="attribute(Q{}when)" jsTest="return item.name==='when'"/>
+              </slash>
+             </fn>
+             <elem line="71" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Datum rojstva: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <valueOf flags="l">
+                 <fn name="string-join">
+                  <convert from="xs:untypedAtomic" to="xs:string">
+                   <data>
+                    <slash>
+                     <slash>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}birth)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='birth';"/>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}date)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='date';"/>
+                     </slash>
+                     <axis name="attribute" nodeTest="attribute(Q{}when)" jsTest="return item.name==='when'"/>
+                    </slash>
+                   </data>
+                  </convert>
+                  <str val=" "/>
+                 </fn>
+                </valueOf>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="75">
+             <fn name="exists">
+              <slash>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}birth)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='birth';"/>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}placeName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='placeName';"/>
+              </slash>
+             </fn>
+             <elem line="83" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Kraj Rojstva: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <forEach>
+                 <slash>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}birth)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='birth';"/>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}placeName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='placeName';"/>
+                 </slash>
+                 <callT line="84" name="povezavaKraj" bSlot="1"/>
+                </forEach>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="89">
+             <fn name="exists">
+              <first>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}occupation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='occupation';"/>
+              </first>
+             </fn>
+             <elem line="97" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Poklic: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <valueOf flags="l">
+                 <convert from="xs:untypedAtomic" to="xs:string">
+                  <data>
+                   <first>
+                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}occupation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='occupation';"/>
+                   </first>
+                  </data>
+                 </convert>
+                </valueOf>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="101">
+             <fn name="exists">
+              <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}nationality)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='nationality';"/>
+             </fn>
+             <let line="102" var="narodnost" as="xs:string" slot="2" eval="8">
+              <fn name="substring-after">
+               <check card="?" diag="0|0||fn:substring-after">
+                <cvUntyped to="xs:string">
+                 <data>
+                  <slash>
+                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}nationality)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='nationality';"/>
+                   <axis name="attribute" nodeTest="attribute(Q{}ana)" jsTest="return item.name==='ana'"/>
+                  </slash>
+                 </data>
+                </cvUntyped>
+               </check>
+               <str val="#"/>
+              </fn>
+              <elem line="110" name="tr" nsuri="" flags="l">
+               <sequence>
+                <elem name="td" nsuri="" flags="l">
+                 <elem name="b" nsuri="" flags="l">
+                  <valueOf flags="l">
+                   <str val="Državljanstvo: "/>
+                  </valueOf>
+                 </elem>
+                </elem>
+                <elem name="td" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <fn name="string-join">
+                   <convert from="xs:untypedAtomic" to="xs:string">
+                    <data>
+                     <docOrder intra="1">
+                      <slash>
+                       <docOrder intra="1">
+                        <slash>
+                         <docOrder intra="1">
+                          <filter flags="b">
+                           <slash>
+                            <docOrder intra="1">
+                             <slash>
+                              <docOrder intra="1">
+                               <filter flags="b">
+                                <slash>
+                                 <docOrder intra="1">
+                                  <slash>
+                                   <docOrder intra="1">
+                                    <slash>
+                                     <docOrder intra="1">
+                                      <slash>
+                                       <fn name="reverse">
+                                        <slash simple="1">
+                                         <dot type="element(Q{http://www.tei-c.org/ns/1.0}person)"/>
+                                         <axis name="ancestor" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}TEI)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='TEI';"/>
+                                        </slash>
+                                       </fn>
+                                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}teiHeader)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='teiHeader';"/>
+                                      </slash>
+                                     </docOrder>
+                                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}encodingDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='encodingDesc';"/>
+                                    </slash>
+                                   </docOrder>
+                                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}classDecl)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='classDecl';"/>
+                                  </slash>
+                                 </docOrder>
+                                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}taxonomy)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='taxonomy';"/>
+                                </slash>
+                                <gc op="=" card="1:1" comp="CCC">
+                                 <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                                 <str val="taxonomy.drzavljanstvo"/>
+                                </gc>
+                               </filter>
+                              </docOrder>
+                              <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}category)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='category';"/>
+                             </slash>
+                            </docOrder>
+                            <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}category)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='category';"/>
+                           </slash>
+                           <gc op="=" card="1:1" comp="CCC">
+                            <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                            <varRef name="narodnost" slot="2"/>
+                           </gc>
+                          </filter>
+                         </docOrder>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}catDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='catDesc';"/>
+                        </slash>
+                       </docOrder>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}term)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='term';"/>
+                      </slash>
+                     </docOrder>
+                    </data>
+                   </convert>
+                   <str val=" "/>
+                  </fn>
+                 </valueOf>
+                </elem>
+               </sequence>
+              </elem>
+             </let>
+            </choose>
+            <choose line="114">
+             <fn name="exists">
+              <filter flags="b">
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}state)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='state';"/>
+               <gc op="=" card="1:1" comp="CCC">
+                <attVal name="Q{}type" chk="0"/>
+                <str val="rightOfDomicile"/>
+               </gc>
+              </filter>
+             </fn>
+             <elem line="122" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Domovinska pravica: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <forEach>
+                 <slash>
+                  <slash>
+                   <filter flags="b">
+                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}state)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='state';"/>
+                    <gc op="=" card="1:1" comp="CCC">
+                     <attVal name="Q{}type" chk="0"/>
+                     <str val="rightOfDomicile"/>
+                    </gc>
+                   </filter>
+                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}desc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='desc';"/>
+                  </slash>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}placeName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='placeName';"/>
+                 </slash>
+                 <callT line="123" name="povezavaKraj" bSlot="2"/>
+                </forEach>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="128">
+             <fn name="exists">
+              <filter flags="b">
+               <slash>
+                <slash>
+                 <slash simple="1">
+                  <first>
+                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                  </first>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                 </slash>
+                 <first>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                 </first>
+                </slash>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}region)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='region';"/>
+               </slash>
+               <gc op="=" card="1:1" comp="CCC">
+                <attVal name="Q{}type" chk="0"/>
+                <str val="district"/>
+               </gc>
+              </filter>
+             </fn>
+             <elem line="136" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Okraj bivališča: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <valueOf flags="l">
+                 <fn name="string-join">
+                  <convert from="xs:untypedAtomic" to="xs:string">
+                   <data>
+                    <filter flags="b">
+                     <slash>
+                      <slash>
+                       <slash simple="1">
+                        <first>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                        </first>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                       </slash>
+                       <first>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                       </first>
+                      </slash>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}region)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='region';"/>
+                     </slash>
+                     <gc op="=" card="1:1" comp="CCC">
+                      <attVal name="Q{}type" chk="0"/>
+                      <str val="district"/>
+                     </gc>
+                    </filter>
+                   </data>
+                  </convert>
+                  <str val=" "/>
+                 </fn>
+                </valueOf>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="140">
+             <fn name="exists">
+              <filter flags="b">
+               <slash>
+                <slash>
+                 <slash simple="1">
+                  <first>
+                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                  </first>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                 </slash>
+                 <first>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                 </first>
+                </slash>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}region)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='region';"/>
+               </slash>
+               <gc op="=" card="1:1" comp="CCC">
+                <attVal name="Q{}type" chk="0"/>
+                <str val="municipality"/>
+               </gc>
+              </filter>
+             </fn>
+             <elem line="148" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Občina bivališča: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <forEach>
+                 <filter flags="b">
+                  <slash>
+                   <slash>
+                    <slash simple="1">
+                     <first>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                     </first>
+                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                    </slash>
+                    <first>
+                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                    </first>
+                   </slash>
+                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}region)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='region';"/>
+                  </slash>
+                  <gc op="=" card="1:1" comp="CCC">
+                   <attVal name="Q{}type" chk="0"/>
+                   <str val="municipality"/>
+                  </gc>
+                 </filter>
+                 <callT line="149" name="povezavaKraj" bSlot="3"/>
+                </forEach>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="154">
+             <fn name="exists">
+              <slash>
+               <slash>
+                <slash simple="1">
+                 <first>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                 </first>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                </slash>
+                <first>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                </first>
+               </slash>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}settlement)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='settlement';"/>
+              </slash>
+             </fn>
+             <elem line="162" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Kraj bivališča: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <forEach>
+                 <slash>
+                  <slash>
+                   <slash simple="1">
+                    <first>
+                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                    </first>
+                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                   </slash>
+                   <first>
+                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                   </first>
+                  </slash>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}settlement)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='settlement';"/>
+                 </slash>
+                 <callT line="163" name="povezavaKraj" bSlot="4"/>
+                </forEach>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="168">
+             <fn name="exists">
+              <slash>
+               <slash>
+                <slash simple="1">
+                 <first>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                 </first>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                </slash>
+                <first>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                </first>
+               </slash>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}street)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='street';"/>
+              </slash>
+             </fn>
+             <elem line="176" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Ulica bivališča: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <sequence>
+                 <valueOf flags="l">
+                  <fn name="string-join">
+                   <convert from="xs:untypedAtomic" to="xs:string">
+                    <data>
+                     <slash>
+                      <slash>
+                       <slash simple="1">
+                        <first>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                        </first>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                       </slash>
+                       <first>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                       </first>
+                      </slash>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}street)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='street';"/>
+                     </slash>
+                    </data>
+                   </convert>
+                   <str val=" "/>
+                  </fn>
+                 </valueOf>
+                 <choose line="177">
+                  <fn name="exists">
+                   <slash>
+                    <slash>
+                     <slash>
+                      <slash simple="1">
+                       <first>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                       </first>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                      </slash>
+                      <first>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                      </first>
+                     </slash>
+                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}street)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='street';"/>
+                    </slash>
+                    <axis name="attribute" nodeTest="attribute(Q{}n)" jsTest="return item.name==='n'"/>
+                   </slash>
+                  </fn>
+                  <valueOf line="178" flags="l">
+                   <fn name="concat">
+                    <str val=" "/>
+                    <atomSing card="?" diag="0|1||fn:concat">
+                     <slash>
+                      <slash>
+                       <slash>
+                        <slash simple="1">
+                         <first>
+                          <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                         </first>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                        </slash>
+                        <first>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                        </first>
+                       </slash>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}street)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='street';"/>
+                      </slash>
+                      <axis name="attribute" nodeTest="attribute(Q{}n)" jsTest="return item.name==='n'"/>
+                     </slash>
+                    </atomSing>
+                   </fn>
+                  </valueOf>
+                 </choose>
+                </sequence>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <forEach line="183">
+             <slash>
+              <slash simple="1">
+               <first>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+               </first>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+              </slash>
+              <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}settlement)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='settlement';"/>
+             </slash>
+             <let line="184" var="kjeKoda" as="xs:string" slot="3" eval="8">
+              <fn name="substring-after">
+               <cvUntyped to="xs:string">
+                <attVal name="Q{}ana" chk="0"/>
+               </cvUntyped>
+               <str val="#"/>
+              </fn>
+              <elem line="188" name="tr" nsuri="" flags="l">
+               <sequence>
+                <elem name="td" nsuri="" flags="l">
+                 <elem name="b" nsuri="" flags="l">
+                  <sequence>
+                   <choose>
+                    <vc op="eq" onEmpty="0" comp="CCC">
+                     <varRef name="kjeKoda" slot="3"/>
+                     <str val="vJugoslaviji"/>
+                    </vc>
+                    <valueOf flags="l">
+                     <str val="Od kdaj biva na ozemlju Jugoslavije: "/>
+                    </valueOf>
+                   </choose>
+                   <choose line="191">
+                    <vc op="eq" onEmpty="0" comp="CCC">
+                     <varRef name="kjeKoda" slot="3"/>
+                     <str val="vLjubljani"/>
+                    </vc>
+                    <valueOf flags="l">
+                     <str val="Od kdaj biva v Ljubljani: "/>
+                    </valueOf>
+                   </choose>
+                   <choose line="194">
+                    <vc op="eq" onEmpty="0" comp="CCC">
+                     <varRef name="kjeKoda" slot="3"/>
+                     <str val="vKranju"/>
+                    </vc>
+                    <valueOf flags="l">
+                     <str val="Od kdaj biva v Kranju: "/>
+                    </valueOf>
+                   </choose>
+                   <choose line="197">
+                    <vc op="eq" onEmpty="0" comp="CCC">
+                     <varRef name="kjeKoda" slot="3"/>
+                     <str val="vVukovarju"/>
+                    </vc>
+                    <valueOf flags="l">
+                     <str val="Od kdaj biva v Vukovarju: "/>
+                    </valueOf>
+                   </choose>
+                  </sequence>
+                 </elem>
+                </elem>
+                <elem line="203" name="td" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <convert from="xs:untypedAtomic" to="xs:string">
+                   <attVal name="Q{}from" chk="0"/>
+                  </convert>
+                 </valueOf>
+                </elem>
+               </sequence>
+              </elem>
+             </let>
+            </forEach>
+            <choose line="207">
+             <fn name="exists">
+              <slash>
+               <slash>
+                <slash simple="1">
+                 <subscript>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                  <int val="2"/>
+                 </subscript>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                </slash>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+               </slash>
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}settlement)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='settlement';"/>
+              </slash>
+             </fn>
+             <elem line="212" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <sequence>
+                  <valueOf flags="l">
+                   <str val="Novo bivališče "/>
+                  </valueOf>
+                  <choose>
+                   <fn name="exists">
+                    <filter flags="b">
+                     <subscript>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                      <int val="2"/>
+                     </subscript>
+                     <fn name="exists">
+                      <axis name="attribute" nodeTest="attribute(Q{}notBefore)" jsTest="return item.name==='notBefore'"/>
+                     </fn>
+                    </filter>
+                   </fn>
+                   <sequence line="214">
+                    <valueOf flags="l">
+                     <str val="po "/>
+                    </valueOf>
+                    <valueOf flags="l">
+                     <convert from="xs:untypedAtomic" to="xs:string">
+                      <data>
+                       <slash simple="1">
+                        <subscript>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                         <int val="2"/>
+                        </subscript>
+                        <axis name="attribute" nodeTest="attribute(Q{}notBefore)" jsTest="return item.name==='notBefore'"/>
+                       </slash>
+                      </data>
+                     </convert>
+                    </valueOf>
+                   </sequence>
+                  </choose>
+                  <valueOf flags="Sl">
+                   <str val=":"/>
+                  </valueOf>
+                 </sequence>
+                </elem>
+               </elem>
+               <elem line="220" name="td" nsuri="" flags="l">
+                <forEach>
+                 <slash>
+                  <slash>
+                   <slash simple="1">
+                    <subscript>
+                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}residence)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='residence';"/>
+                     <int val="2"/>
+                    </subscript>
+                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}location)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='location';"/>
+                   </slash>
+                   <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}address)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='address';"/>
+                  </slash>
+                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}settlement)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='settlement';"/>
+                 </slash>
+                 <callT line="221" name="povezavaKraj" bSlot="5"/>
+                </forEach>
+               </elem>
+              </sequence>
+             </elem>
+            </choose>
+            <choose line="226">
+             <fn name="exists">
+              <filter flags="b">
+               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}state)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='state';"/>
+               <gc op="=" card="1:1" comp="CCC">
+                <attVal name="Q{}type" chk="0"/>
+                <str val="maritalStatus"/>
+               </gc>
+              </filter>
+             </fn>
+             <let line="227" var="stan" as="xs:string" slot="4" eval="8">
+              <fn name="substring-after">
+               <check card="?" diag="0|0||fn:substring-after">
+                <cvUntyped to="xs:string">
+                 <data>
+                  <slash>
+                   <filter flags="b">
+                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}state)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='state';"/>
+                    <gc op="=" card="1:1" comp="CCC">
+                     <attVal name="Q{}type" chk="0"/>
+                     <str val="maritalStatus"/>
+                    </gc>
+                   </filter>
+                   <axis name="attribute" nodeTest="attribute(Q{}ana)" jsTest="return item.name==='ana'"/>
+                  </slash>
+                 </data>
+                </cvUntyped>
+               </check>
+               <str val="#"/>
+              </fn>
+              <elem line="235" name="tr" nsuri="" flags="l">
+               <sequence>
+                <elem name="td" nsuri="" flags="l">
+                 <elem name="b" nsuri="" flags="l">
+                  <valueOf flags="l">
+                   <str val="Družinski stan: "/>
+                  </valueOf>
+                 </elem>
+                </elem>
+                <elem name="td" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <fn name="string-join">
+                   <convert from="xs:untypedAtomic" to="xs:string">
+                    <data>
+                     <docOrder intra="1">
+                      <filter flags="b">
+                       <slash>
+                        <docOrder intra="1">
+                         <slash>
+                          <docOrder intra="1">
+                           <filter flags="b">
+                            <slash>
+                             <docOrder intra="1">
+                              <slash>
+                               <docOrder intra="1">
+                                <filter flags="b">
+                                 <slash>
+                                  <docOrder intra="1">
+                                   <slash>
+                                    <docOrder intra="1">
+                                     <slash>
+                                      <docOrder intra="1">
+                                       <slash>
+                                        <fn name="reverse">
+                                         <slash simple="1">
+                                          <dot type="element(Q{http://www.tei-c.org/ns/1.0}person)"/>
+                                          <axis name="ancestor" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}TEI)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='TEI';"/>
+                                         </slash>
+                                        </fn>
+                                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}teiHeader)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='teiHeader';"/>
+                                       </slash>
+                                      </docOrder>
+                                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}encodingDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='encodingDesc';"/>
+                                     </slash>
+                                    </docOrder>
+                                    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}classDecl)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='classDecl';"/>
+                                   </slash>
+                                  </docOrder>
+                                  <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}taxonomy)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='taxonomy';"/>
+                                 </slash>
+                                 <gc op="=" card="1:1" comp="CCC">
+                                  <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                                  <str val="taxonomy.stan"/>
+                                 </gc>
+                                </filter>
+                               </docOrder>
+                               <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}category)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='category';"/>
+                              </slash>
+                             </docOrder>
+                             <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}category)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='category';"/>
+                            </slash>
+                            <gc op="=" card="1:1" comp="CCC">
+                             <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                             <varRef name="stan" slot="4"/>
+                            </gc>
+                           </filter>
+                          </docOrder>
+                          <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}catDesc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='catDesc';"/>
+                         </slash>
+                        </docOrder>
+                        <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}term)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='term';"/>
+                       </slash>
+                       <gc op="=" card="1:1" comp="CCC">
+                        <attVal name="Q{http://www.w3.org/XML/1998/namespace}lang" chk="0"/>
+                        <str val="sl"/>
+                       </gc>
+                      </filter>
+                     </docOrder>
+                    </data>
+                   </convert>
+                   <str val=" "/>
+                  </fn>
+                 </valueOf>
+                </elem>
+               </sequence>
+              </elem>
+             </let>
+            </choose>
+            <forEach line="239">
+             <filter flags="b">
+              <filter flags="b">
+               <slash>
+                <slash>
+                 <axis name="parent" nodeTest="(element()|document-node())" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType===9||item.nodeType===11||item.nodeType===1);"/>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listRelation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listRelation';"/>
+                </slash>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}relation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='relation';"/>
+               </slash>
+               <gc op="=" card="1:1" comp="CCC">
+                <attVal name="Q{}name" chk="0"/>
+                <str val="spouse"/>
+               </gc>
+              </filter>
+              <gc op="=" card="N:1" comp="CCC">
+               <fn name="tokenize">
+                <cvUntyped to="xs:string">
+                 <attVal name="Q{}mutual" chk="0"/>
+                </cvUntyped>
+                <str val=" "/>
+                <str val=""/>
+               </fn>
+               <fn name="concat">
+                <str val="#"/>
+                <atomSing card="?" diag="0|1||fn:concat">
+                 <varRef name="ident" slot="0"/>
+                </atomSing>
+               </fn>
+              </gc>
+             </filter>
+             <let line="240" var="spouseID" as="xs:untypedAtomic" slot="5" eval="7">
+              <cast line="241" as="xs:untypedAtomic" emptiable="0">
+               <fn name="string-join">
+                <data>
+                 <forEach>
+                  <slash>
+                   <dot type="element(Q{http://www.tei-c.org/ns/1.0}relation)"/>
+                   <fn name="tokenize">
+                    <cvUntyped to="xs:string">
+                     <attVal name="Q{}mutual" chk="0"/>
+                    </cvUntyped>
+                    <str val=" "/>
+                    <str val=""/>
+                   </fn>
+                  </slash>
+                  <choose line="243">
+                   <gc op="!=" card="N:1" comp="GAC|http://www.w3.org/2005/xpath-functions/collation/codepoint">
+                    <data>
+                     <varRef name="ident" slot="0"/>
+                    </data>
+                    <fn name="substring-after">
+                     <dot type="xs:string"/>
+                     <str val="#"/>
+                    </fn>
+                   </gc>
+                   <valueOf line="244">
+                    <fn name="substring-after">
+                     <dot type="xs:string"/>
+                     <str val="#"/>
+                    </fn>
+                   </valueOf>
+                  </choose>
+                 </forEach>
+                </data>
+                <str val=""/>
+               </fn>
+              </cast>
+              <elem line="255" name="tr" nsuri="" flags="l">
+               <sequence>
+                <elem name="td" nsuri="" flags="l">
+                 <elem name="b" nsuri="" flags="l">
+                  <valueOf flags="l">
+                   <str val="Zakonec: "/>
+                  </valueOf>
+                 </elem>
+                </elem>
+                <elem name="td" nsuri="" flags="l">
+                 <forEach>
+                  <docOrder intra="1">
+                   <filter flags="b">
+                    <slash>
+                     <fn name="reverse">
+                      <slash simple="1">
+                       <dot type="element(Q{http://www.tei-c.org/ns/1.0}relation)"/>
+                       <axis name="ancestor" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listPerson)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listPerson';"/>
+                      </slash>
+                     </fn>
+                     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}person)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='person';"/>
+                    </slash>
+                    <gc op="=" card="1:1" comp="CCC">
+                     <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                     <varRef name="spouseID" slot="5"/>
+                    </gc>
+                   </filter>
+                  </docOrder>
+                  <elem line="256" name="a" nsuri="" flags="l">
+                   <sequence>
+                    <att name="href" flags="l">
+                     <fn name="concat">
+                      <str val="person.html?id="/>
+                      <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                     </fn>
+                    </att>
+                    <forEach line="257">
+                     <first>
+                      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+                     </first>
+                     <callT line="258" name="imeOsebe" bSlot="6"/>
+                    </forEach>
+                   </sequence>
+                  </elem>
+                 </forEach>
+                </elem>
+               </sequence>
+              </elem>
+             </let>
+            </forEach>
+            <forEach line="265">
+             <filter flags="b">
+              <filter flags="b">
+               <slash>
+                <slash>
+                 <axis name="parent" nodeTest="(element()|document-node())" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType===9||item.nodeType===11||item.nodeType===1);"/>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listRelation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listRelation';"/>
+                </slash>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}relation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='relation';"/>
+               </slash>
+               <gc op="=" card="1:1" comp="CCC">
+                <attVal name="Q{}name" chk="0"/>
+                <str val="parent"/>
+               </gc>
+              </filter>
+              <gc op="=" card="N:1" comp="CCC">
+               <fn name="tokenize">
+                <cvUntyped to="xs:string">
+                 <attVal name="Q{}active" chk="0"/>
+                </cvUntyped>
+                <str val=" "/>
+                <str val=""/>
+               </fn>
+               <fn name="concat">
+                <str val="#"/>
+                <atomSing card="?" diag="0|1||fn:concat">
+                 <varRef name="ident" slot="0"/>
+                </atomSing>
+               </fn>
+              </gc>
+             </filter>
+             <elem line="273" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Otroci: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <forEachGroup algorithm="by">
+                 <dot role="select" type="element(Q{http://www.tei-c.org/ns/1.0}relation)"/>
+                 <fn role="key" name="tokenize">
+                  <cvUntyped to="xs:string">
+                   <attVal name="Q{}passive" chk="0"/>
+                  </cvUntyped>
+                  <str val=" "/>
+                  <str val=""/>
+                 </fn>
+                 <str role="collation" val="http://www.w3.org/2005/xpath-functions/collation/codepoint"/>
+                 <forEach role="content" line="274">
+                  <currentGroup/>
+                  <let line="275" var="childID" as="xs:string" slot="6" eval="8">
+                   <fn name="substring-after">
+                    <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||fn:substring-after">
+                     <check card="?" diag="0|0||fn:substring-after">
+                      <cvUntyped to="xs:string">
+                       <currentGroupingKey/>
+                      </cvUntyped>
+                     </check>
+                    </treat>
+                    <str val="#"/>
+                   </fn>
+                   <forEach line="276">
+                    <docOrder intra="1">
+                     <filter flags="b">
+                      <slash>
+                       <fn name="reverse">
+                        <slash simple="1">
+                         <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|0|XPTY0020|">
+                          <dot/>
+                         </treat>
+                         <axis name="ancestor" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listPerson)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listPerson';"/>
+                        </slash>
+                       </fn>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}person)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='person';"/>
+                      </slash>
+                      <gc op="=" card="1:1" comp="CCC">
+                       <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                       <varRef name="childID" slot="6"/>
+                      </gc>
+                     </filter>
+                    </docOrder>
+                    <sequence line="277">
+                     <elem name="a" nsuri="" flags="l">
+                      <sequence>
+                       <att name="href" flags="l">
+                        <fn name="concat">
+                         <str val="person.html?id="/>
+                         <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                        </fn>
+                       </att>
+                       <forEach line="278">
+                        <first>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+                        </first>
+                        <callT line="279" name="imeOsebe" bSlot="7"/>
+                       </forEach>
+                      </sequence>
+                     </elem>
+                     <elem name="br" nsuri="" flags="l">
+                      <empty/>
+                     </elem>
+                    </sequence>
+                   </forEach>
+                  </let>
+                 </forEach>
+                </forEachGroup>
+               </elem>
+              </sequence>
+             </elem>
+            </forEach>
+            <forEach line="289">
+             <filter flags="b">
+              <filter flags="b">
+               <slash>
+                <slash>
+                 <axis name="parent" nodeTest="(element()|document-node())" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType===9||item.nodeType===11||item.nodeType===1);"/>
+                 <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listRelation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listRelation';"/>
+                </slash>
+                <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}relation)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='relation';"/>
+               </slash>
+               <gc op="=" card="1:1" comp="CCC">
+                <attVal name="Q{}name" chk="0"/>
+                <str val="parent"/>
+               </gc>
+              </filter>
+              <gc op="=" card="N:1" comp="CCC">
+               <fn name="tokenize">
+                <cvUntyped to="xs:string">
+                 <attVal name="Q{}passive" chk="0"/>
+                </cvUntyped>
+                <str val=" "/>
+                <str val=""/>
+               </fn>
+               <fn name="concat">
+                <str val="#"/>
+                <atomSing card="?" diag="0|1||fn:concat">
+                 <varRef name="ident" slot="0"/>
+                </atomSing>
+               </fn>
+              </gc>
+             </filter>
+             <elem line="297" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Starši: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <forEachGroup algorithm="by">
+                 <dot role="select" type="element(Q{http://www.tei-c.org/ns/1.0}relation)"/>
+                 <fn role="key" name="tokenize">
+                  <cvUntyped to="xs:string">
+                   <attVal name="Q{}active" chk="0"/>
+                  </cvUntyped>
+                  <str val=" "/>
+                  <str val=""/>
+                 </fn>
+                 <str role="collation" val="http://www.w3.org/2005/xpath-functions/collation/codepoint"/>
+                 <forEach role="content" line="298">
+                  <currentGroup/>
+                  <let line="299" var="parentID" as="xs:string" slot="7" eval="8">
+                   <fn name="substring-after">
+                    <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||fn:substring-after">
+                     <check card="?" diag="0|0||fn:substring-after">
+                      <cvUntyped to="xs:string">
+                       <currentGroupingKey/>
+                      </cvUntyped>
+                     </check>
+                    </treat>
+                    <str val="#"/>
+                   </fn>
+                   <forEach line="300">
+                    <docOrder intra="1">
+                     <filter flags="b">
+                      <slash>
+                       <fn name="reverse">
+                        <slash simple="1">
+                         <treat as="node()" jsTest="return SaxonJS.U.isNode(item);" diag="14|0|XPTY0020|">
+                          <dot/>
+                         </treat>
+                         <axis name="ancestor" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listPerson)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listPerson';"/>
+                        </slash>
+                       </fn>
+                       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}person)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='person';"/>
+                      </slash>
+                      <gc op="=" card="1:1" comp="CCC">
+                       <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                       <varRef name="parentID" slot="7"/>
+                      </gc>
+                     </filter>
+                    </docOrder>
+                    <sequence line="301">
+                     <elem name="a" nsuri="" flags="l">
+                      <sequence>
+                       <att name="href" flags="l">
+                        <fn name="concat">
+                         <str val="person.html?id="/>
+                         <attVal name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+                        </fn>
+                       </att>
+                       <forEach line="302">
+                        <first>
+                         <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}persName)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='persName';"/>
+                        </first>
+                        <callT line="303" name="imeOsebe" bSlot="8"/>
+                       </forEach>
+                      </sequence>
+                     </elem>
+                     <elem name="br" nsuri="" flags="l">
+                      <empty/>
+                     </elem>
+                    </sequence>
+                   </forEach>
+                  </let>
+                 </forEach>
+                </forEachGroup>
+               </elem>
+              </sequence>
+             </elem>
+            </forEach>
+            <forEach line="313">
+             <filter flags="b">
+              <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}note)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='note';"/>
+              <gc op="=" card="1:1" comp="CCC">
+               <attVal name="Q{}type" chk="0"/>
+               <str val="opomba"/>
+              </gc>
+             </filter>
+             <elem line="321" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Opomba: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <valueOf flags="l">
+                 <convert from="xs:untypedAtomic" to="xs:string">
+                  <data>
+                   <dot type="element(Q{http://www.tei-c.org/ns/1.0}note)"/>
+                  </data>
+                 </convert>
+                </valueOf>
+               </elem>
+              </sequence>
+             </elem>
+            </forEach>
+            <forEach line="325">
+             <filter flags="b">
+              <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}note)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='note';"/>
+              <gc op="=" card="1:1" comp="CCC">
+               <attVal name="Q{}type" chk="0"/>
+               <str val="family"/>
+              </gc>
+             </filter>
+             <elem line="333" name="tr" nsuri="" flags="l">
+              <sequence>
+               <elem name="td" nsuri="" flags="l">
+                <elem name="b" nsuri="" flags="l">
+                 <valueOf flags="l">
+                  <str val="Družina: "/>
+                 </valueOf>
+                </elem>
+               </elem>
+               <elem name="td" nsuri="" flags="l">
+                <valueOf flags="l">
+                 <convert from="xs:untypedAtomic" to="xs:string">
+                  <data>
+                   <dot type="element(Q{http://www.tei-c.org/ns/1.0}note)"/>
+                  </data>
+                 </convert>
+                </valueOf>
+               </elem>
+              </sequence>
+             </elem>
+            </forEach>
+           </sequence>
+          </elem>
+         </sequence>
+        </elem>
+       </sequence>
+      </resultDoc>
+     </forEach>
+    </let>
+   </templateRule>
+  </mode>
+ </co>
+ <overridden/>
+ <key name="Q{http://saxon.sf.net/}kk101" line="0" binds="" flags="u">
+  <p.nodeSet type="element(Q{http://www.tei-c.org/ns/1.0}person)">
+   <slash baseUri="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl" ns="xsl=~ geo=http://www.w3.org/2003/01/geo/wgs84_pos# tei=http://www.tei-c.org/ns/1.0 ixsl=~ xs=~ rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#" line="15">
+    <slash>
+     <slash>
+      <slash>
+       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}TEI)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='TEI';"/>
+       <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}text)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='text';"/>
+      </slash>
+      <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}body)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='body';"/>
+     </slash>
+     <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}listPerson)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='listPerson';"/>
+    </slash>
+    <axis name="child" nodeTest="element(Q{http://www.tei-c.org/ns/1.0}person)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri==='http://www.tei-c.org/ns/1.0'&amp;&amp;q.local==='person';"/>
+   </slash>
+  </p.nodeSet>
+  <attVal baseUri="file:/Users/andrejp/Repo/sidih/Judje1937/bootstrap/person.xsl" ns="xsl=~ geo=http://www.w3.org/2003/01/geo/wgs84_pos# tei=http://www.tei-c.org/ns/1.0 ixsl=~ xs=~ rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#" line="-1" name="Q{http://www.w3.org/XML/1998/namespace}id" chk="0"/>
+ </key>
+ <output>
+  <property name="{http://saxon.sf.net/}stylesheet-version" value="30"/>
+ </output>
+ <decimalFormat/>
+</package>
+<?Σ bf6e9444?>
