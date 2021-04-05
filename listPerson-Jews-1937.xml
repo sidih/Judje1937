@@ -24,14 +24,13 @@
          <publicationStmt>
             <publisher>Inštitut za novejšo zgodovino</publisher>
             <authority>Raziskovalna infrastruktura slovenskega zgodovinopisja</authority>
-            <pubPlace><!-- VPIŠI KRAJ DOSTOPNOSTI --></pubPlace>
+            <pubPlace>Ljubljana</pubPlace>
             <pubPlace>https://github.com/SIstory/Judovska_skupnost</pubPlace>
             <date>2015</date>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p>To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 International licenco</ref></p>
             </availability>
-            <idno type="PID">o:Judje1937</idno>
          </publicationStmt>
          <sourceDesc>
             <bibl type="arhiv" xml:id="ARS.AS68.29-2_1936-38.9437_1938.1937-05-01">
